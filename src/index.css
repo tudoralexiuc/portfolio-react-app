@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-mono;
+    background-color: #bcf5bc;
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home {
+  margin: 10% 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.backButton {
+  float: right;
+}
+
+.backButton button {
+  width: 150px;
+  height: 50px;
+  background-color: #625f5f;
+  border-radius: 5px;
+  color: white;
+}
+
+.backButton button:hover {
+  background-color: rgb(51, 51, 51);
+}
+
+.middle-section {
+  display: flex;
+}
+
+.item {
+  min-height: 30rem;
+  max-width: 20rem;
+  padding: 20px;
+  transition: transform 0.5s ease;
+}
+
+.item svg {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(191, 255, 235);
+  border-radius: 0.5rem;
+  box-shadow: 6px 8px 0 5px rgb(129, 185, 166);
+  pointer-events: none;
+}
+
+.item:hover {
+  transform: translateY(-20px);
+}
+
+.inner-carousel {
+  display: flex;
+}
+
+#handflower {
+  animation: handflower 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes handflower {
+  from {
+    transform: scaleX(0.5);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+#groundflower {
+  animation: groundflower 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes groundflower {
+  from {
+    transform: scaleY(0.8);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .inner-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .item {
+    height: 30rem;
+  }
+
+  .item:hover {
+    transform: scaleX(1);
+  }
 }
