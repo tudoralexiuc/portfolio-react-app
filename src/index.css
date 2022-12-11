@@ -6,6 +6,7 @@
   body {
     @apply font-mono;
     background-color: #bcf5bc;
+    overflow-x: hidden;
   }
   li {
     @apply px-4;
@@ -21,7 +22,10 @@
 }
 
 .backButton {
-  float: right;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 9999;
 }
 
 .backButton button {
@@ -104,4 +108,23 @@
   .item:hover {
     transform: scaleX(1);
   }
+}
+
+/* Mine's */
+
+.image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.images {
+  margin: 10% 0%;
+}
+
+.image-track {
+  display: flex;
+  gap: 4vmin;
 }

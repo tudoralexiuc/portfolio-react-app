@@ -8,7 +8,7 @@ function home() {
     <div className="home">
       <div className="inner-carousel">
         <div className="item">
-          <Link to="/design">
+          <Link to="/tuinexpress">
             <svg
               width="671"
               height="453"
@@ -195,7 +195,7 @@ function home() {
           </Link>
         </div>
         <div className="item">
-          <Link to="/tooling">
+          <Link to="/myassignment">
             <svg
               width="672"
               height="448"

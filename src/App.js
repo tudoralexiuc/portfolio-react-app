@@ -1,21 +1,15 @@
 import Home from './components/home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Analyse from './components/Analyse';
-import Design from './components/Design';
-import Realisation from './components/Realisation';
-import Tooling from './components/Tooling';
-import Skills from './components/Skills';
+import Company from './components/Company';
+import Mine from './components/Mine';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/analyse" element={<Analyse />} />
-        <Route path="/design" element={<Design />} />
-        <Route path="/realisation" element={<Realisation />} />
-        <Route path="/tooling" element={<Tooling />} />
-        <Route path="/skills" element={<Skills />} />
+        <Route path="/tuinexpress" element={<Company />} />
+        <Route path="/myassignment" element={<Mine />} />
       </Routes>
     </Router>
   );
